@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="form-card">
+            <h2>Register</h2>
+            <form action="Login.html" method="get">
+                <div class="field-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"
+                        pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
+                        title="Must contain at least one number, one letter, one symbol, and be at least 8 characters long"
+                        required>
+                </div>
+
+                <div class="field-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="form-btn">Submit</button>
+                    <button type="reset" class="secondary-btn">Clear</button>
+                </div>
+            </form>
+
+            <p class="center-text">
+                Already registered? <a href="Login.html">Login here</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
